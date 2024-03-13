@@ -1,0 +1,2 @@
+num1 = float(input("Digite o valor de um lado do quadrado: ")) # coloca o valor na variável do tipo real
+print(f'A área do quadrado é {num1 ** 2:.2f} e seu dobro é {(num1**2) * 2:.2f}') # exibe o resultado
