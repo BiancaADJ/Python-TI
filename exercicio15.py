@@ -3,7 +3,7 @@ alt = float(input("Digite a sua altura: ")) # coloca o valor na variável de alt
 sx = input("Agora digite o seu sexo biológico: \n[F] - Feminino\t[M] - Masculino\n\n-->\t") # guarda o valor na variável do tipo caracter
 peso = float(input("Digite seu peso atual: ")) # coloca o valor na variável de peso atual
 
-if sx == 'M' or sx == 'm' or sx == 'F' or sx == 'f' and peso > 25.0: # validando  a entrada de dados
+if (sx == 'M' or 'm') or (sx == 'F' or 'f') and peso > 25.0: # validando  a entrada de dados
     if sx == 'M' or sx == 'm':
         peso_ideal: float = (72.7 * alt) - 58
     elif sx == 'F' or sx == 'f':
