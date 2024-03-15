@@ -1,12 +1,11 @@
-sx = 'a' # declarando uma variável o tipo caracter
 alt = float(input("Digite a sua altura: ")) # coloca o valor na variável de altura
 sx = input("Agora digite o seu sexo biológico: \n[F] - Feminino\t[M] - Masculino\n\n-->\t") # guarda o valor na variável do tipo caracter
 peso = float(input("Digite seu peso atual: ")) # coloca o valor na variável de peso atual
 
-if (sx == 'M' or 'm') or (sx == 'F' or 'f') and peso > 25.0: # validando  a entrada de dados
-    if sx == 'M' or sx == 'm':
+if (sx.upper() == 'M' or sx.upper() == 'F') and peso > 25.0: # validando  a entrada de dados
+    if sx.upper() == 'M':
         peso_ideal: float = (72.7 * alt) - 58
-    elif sx == 'F' or sx == 'f':
+    elif sx.upper() == 'F':
         peso_ideal: float = (62.1 * alt) - 44.7
     else:
         print('[Entrada de dados inválida]') # entrada inválida

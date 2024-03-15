@@ -5,14 +5,14 @@ for i in range(5):
     print("Gostaria de mudar o salário de ",func[i],"?\n[S] - Sim\t[N] - Não\n ")
     es = str(input())
     
-    if es == 'S' or es == 's':
+    if es.upper() == 'S':
         print("Salário atual de ",func[i],": R$",sal[i],"Digite a porcentagem de reajuste que gostaria de fazer: ")
         rea = float(input())
 
         rea = (sal[i] / 100) * rea
         sal[i] = sal[i] + rea
 
-    elif es == 'N' or es == 'n':
+    elif es.upper() == 'N':
         print(" ")
     else:
         print("\n[Valor inválido]\n")
