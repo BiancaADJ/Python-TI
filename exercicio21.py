@@ -10,14 +10,11 @@ media_sal = 0
 menos: float = 0
 
 for i in range(num): # coletando todos os dados dos habitantes
-    print("Digite o nome do ",j,"º habitante: ") # nome
-    nom = str(input())
+    nom = str(input(f'Digite o nome do {j}º habitante: '))
     nome.append(nom) # colocando o nome dentro do vetor
-    print("Digite o salário de ",nom,": ") # salario
-    sal = float(input())
+    sal = float(input(f'Digite o salário de {nom.upper()}: '))
     salario.append(sal) # colocando o salário dentro do vetor
-    print("Digite o número de filhos que ",nom," possui: ") # números de filhos
-    fi = int(input())
+    fi = int(input(f'Digite o número de filhos que {nom.upper()} possui: '))
     filhos.append(fi) # colocando a informação do número de filhos no vetor
     j = j + 1
 
@@ -30,4 +27,4 @@ for i in range(num): # coletando todos os dados dos habitantes
         menos = menos + 1
 
 print(f'Salário médio da população: R${media_sal / num:.2f}\nMédia do número de filhos: {media_filhos / num:.0f}')
-print(f'Maior salário dos habitantes: R${maior:.2f}\nSalário Negativo: {(num / menos) * 100:.2f}% da população.')
+print(f'Maior salário dos habitantes: R${maior:.2f}\nSalário Negativo: {(num / menos) * 100:.0f}% da população.')
