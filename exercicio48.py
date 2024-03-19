@@ -15,41 +15,26 @@ nulo = 0
 
 for i in range(5):
     re = str(input(f'Policial: {textos[i]}\n[SIM\t[NAO]\n\nSua resposta:\t'))
-    res.append(re.upper())
+    re = re.upper()
+    res.append(re)
 
     if (re != "SIM") and (re != "NAO"):
         print(textos[5])
         res[i] = "NULO"
         nulo = nulo + 1
+    else:
+        res[i] = re
+        if re == "SIM":
+            s = s + 1
+        else:
+            n = n + 1
 
-#       se (re != "SIM" e re != "NAO"){
-#         escreva(texto[5])
-#         res[i] = "NULO"
-#         nulo = nulo + 1
-#       }
-#       senao{
-#         res[i] = re
-#         se (re == "SIM") {
-#           s = s + 1
-#         }
-#         senao {
-#           n = n + 1
-#         }
-#       }
-#     }
-
-#     escreva("\nClassificaÃ§Ã£o:\t")
-#     se (s == 5) {
-#       escreva(texto[9])
-#     }
-#     senao se (s == 3 ou s == 4) {
-#       escreva(texto[8])
-#     }
-#     senao se (nulo > 3) {
-#       escreva(texto[7], "\n\nNota: NÃ£o colaborou com a investigaÃ§Ã£o.")
-#     }
-#     senao {
-#       escreva(texto[7])
-#     }
-#   }
-# }
+print("Classificação:\t")
+if s == 5:
+    print(textos[9])
+elif (s == 3) or (s == 4):
+    print(textos[8])
+elif nulo > 3:
+    print(textos[7],"\n\nNota: Não colaborou com a investigação")
+else:
+    print(textos[7])
