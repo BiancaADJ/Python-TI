@@ -27,3 +27,8 @@ for i in range(3): # laço de repetição para ver se foi aprovado
 for i in range(2): # laço de repetição para ver se foi reprovado
     if nt == rep[i]:
         print(f'Reprovado [{nt}]') # exibir resultado
+
+# Github Copilot:
+media = sum(float(input(f'Digite a {i+1}ª nota do aluno: ')) for i in range(2)) / 2
+nt = 'E' if media < 4 else 'D' if media < 6 else 'C' if media < 7.5 else 'B' if media < 9 else 'A'
+print(f'{"Aprovado" if nt in "ABC" else "Reprovado"} [{nt}]')
